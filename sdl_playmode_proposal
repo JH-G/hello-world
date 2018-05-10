@@ -33,6 +33,9 @@
       <description>Sets the shuffle mode of the Media app connected via SDL. The available shuffle mode is “OFF”, “ON” and “NOT_SUPPORT”.</description>
       <description>If this param is not provided, or is set to “NOT_SUPPORT”, the HU system may hide the button or set the button as unable.</description>
     </param>
+    <param name="appID" type="Integer" mandatory="true">
+      <description>ID of application that requested this RPC.</description>
+    </param>
   </function>
   <function name="SetMediaPlayMode" messagetype="response">
   </function>
