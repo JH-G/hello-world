@@ -1,27 +1,27 @@
 
+<enum name="CycleMode">
+  <description>Sets the cycle mode of the media player.</description>
+  <element name=“SINGLE” internal_name=“CYCLE_SINGLE">
+  </element>
+  <element name=“LIST” internal_name="CYCLE_LIST">
+  </element>
+  <element name=“ALL” internal_name="CYCLE_ALL">
+  </element>
+  <element name=“NOT_SUPPORT” internal_name="CYCLE_NOT_SUPPORT">
+  </element>
+</enum>
+
+<enum name=“ShuffleMode”>
+  <description>Sets the shuffle mode of the media player.</description>
+  <element name="OFF" internal_name=“SHUFFLE_OFF">
+  </element>
+  <element name="ON" internal_name="SHUFFLE_ON">
+  </element>
+  <element name="NOT_SUPPORT” internal_name="SHUFFLE_NOT_SUPPORT">
+  </element>
+</enum>
+
 <interface name="UI" version="1.2.0" date="2017-09-05">
-
-  <enum name="CycleMode">
-    <description>Sets the cycle mode of the media player.</description>
-    <element name=“SINGLE” internal_name=“CYCLE_SINGLE">
-    </element>
-    <element name=“LIST” internal_name="CYCLE_LIST">
-    </element>
-    <element name=“ALL” internal_name="CYCLE_ALL">
-    </element>
-    <element name=“NOT_SUPPORT” internal_name="CYCLE_NOT_SUPPORT">
-    </element>
-  </enum>
-
-  <enum name=“ShuffleMode”>
-    <description>Sets the shuffle mode of the media player.</description>
-    <element name="OFF" internal_name=“SHUFFLE_OFF">
-    </element>
-    <element name="ON" internal_name="SHUFFLE_ON">
-    </element>
-    <element name="NOT_SUPPORT” internal_name="SHUFFLE_NOT_SUPPORT">
-    </element>
-  </enum>
 
   <function name="SetMediaPlayMode” messagetype="request">
     <description>Sets the play mode of the media player.</description>
