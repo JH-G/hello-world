@@ -1,48 +1,50 @@
 
+<interface name="UI" version="1.2.0" date="2017-09-05">
 
-<enum name="CycleMode">
-  <description>Sets the cycle mode of the media player.</description>
-  <element name=“SINGLE” internal_name=“CYCLE_SINGLE">
-  </element>
-  <element name=“LIST” internal_name="CYCLE_LIST">
-  </element>
-  <element name=“ALL” internal_name="CYCLE_ALL">
-  </element>
-  <element name=“NOT_SUPPORT” internal_name="CYCLE_NOT_SUPPORT">
-  </element>
-</enum>
+  <enum name="CycleMode">
+    <description>Sets the cycle mode of the media player.</description>
+    <element name=“SINGLE” internal_name=“CYCLE_SINGLE">
+    </element>
+    <element name=“LIST” internal_name="CYCLE_LIST">
+    </element>
+    <element name=“ALL” internal_name="CYCLE_ALL">
+    </element>
+    <element name=“NOT_SUPPORT” internal_name="CYCLE_NOT_SUPPORT">
+    </element>
+  </enum>
 
-<enum name=“ShuffleMode”>
-  <description>Sets the shuffle mode of the media player.</description>
-  <element name="OFF" internal_name=“SHUFFLE_OFF">
-  </element>
-  <element name="ON" internal_name="SHUFFLE_ON">
-  </element>
-  <element name="NOT_SUPPORT” internal_name="SHUFFLE_NOT_SUPPORT">
-  </element>
-</enum>
+  <enum name=“ShuffleMode”>
+    <description>Sets the shuffle mode of the media player.</description>
+    <element name="OFF" internal_name=“SHUFFLE_OFF">
+    </element>
+    <element name="ON" internal_name="SHUFFLE_ON">
+    </element>
+    <element name="NOT_SUPPORT” internal_name="SHUFFLE_NOT_SUPPORT">
+    </element>
+  </enum>
 
-<function name="SetMediaPlayMode” messagetype="request">
-  <description>Sets the play mode of the media player.</description>
-  <param name=“cycleMode” type="Common.CycleMode" mandatory="false">
-    <description>Sets the cycle mode of the Media app connected via SDL. The available cycle mode is “SINGLE”, “LIST”, ALL” and “NOT_SUPPORT”.</description>
-    <description>If this param is not provided, or is set to “NOT_SUPPORT”, the HU system may hide the button or set the button as unable.</description>
-  </param>
-  <param name=“shuffleMode" type="Common.ShuffleMode" mandatory=“false”>
-    <description>Sets the shuffle mode of the Media app connected via SDL. The available shuffle mode is “OFF”, “ON” and “NOT_SUPPORT”.</description>
-    <description>If this param is not provided, or is set to “NOT_SUPPORT”, the HU system may hide the button or set the button as unable.</description>
-  </param>
-</function>
-<function name="SetMediaPlayMode" messagetype="response">
-</function>
+  <function name="SetMediaPlayMode” messagetype="request">
+    <description>Sets the play mode of the media player.</description>
+    <param name=“cycleMode” type="Common.CycleMode" mandatory="false">
+      <description>Sets the cycle mode of the Media app connected via SDL. The available cycle mode is “SINGLE”, “LIST”, ALL” and “NOT_SUPPORT”.</description>
+      <description>If this param is not provided, or is set to “NOT_SUPPORT”, the HU system may hide the button or set the button as unable.</description>
+    </param>
+    <param name=“shuffleMode" type="Common.ShuffleMode" mandatory=“false”>
+      <description>Sets the shuffle mode of the Media app connected via SDL. The available shuffle mode is “OFF”, “ON” and “NOT_SUPPORT”.</description>
+      <description>If this param is not provided, or is set to “NOT_SUPPORT”, the HU system may hide the button or set the button as unable.</description>
+    </param>
+  </function>
+  <function name="SetMediaPlayMode" messagetype="response">
+  </function>
 
-<function name="OnMediaPlayModeChange” messagetype="notification">
-  <description>Must be sent by HU system when the user clicks on buttons of play mode. One or both param below should be provided.</description>
-  <param name="cycleMode" type="Common.CycleMode" mandatory=“false”>
-    <description>The cycle mode which is supposed to be switched to.</description>
-  </param>
-  <param name="shuffleMode" type="Common.ShuffleMode" mandatory=“false”>
-    <description>The shuffle mode which is supposed to be switched to.</description>
-  </param>
-</function>
-
+  <function name="OnMediaPlayModeChange” messagetype="notification">
+    <description>Must be sent by HU system when the user clicks on buttons of play mode. One or both param below should be provided.</description>
+    <param name="cycleMode" type="Common.CycleMode" mandatory=“false”>
+      <description>The cycle mode which is supposed to be switched to.</description>
+    </param>
+    <param name="shuffleMode" type="Common.ShuffleMode" mandatory=“false”>
+      <description>The shuffle mode which is supposed to be switched to.</description>
+    </param>
+  </function>
+  
+</interface>
