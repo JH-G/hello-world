@@ -1,3 +1,4 @@
+HMI API
 
 <enum name="CycleMode">
   <description>Sets the cycle mode of the media player.</description>
