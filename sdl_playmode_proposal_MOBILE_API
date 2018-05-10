@@ -22,6 +22,21 @@ Mobile API
   </element>
 </enum>
 
+<!--
+Base Request / Response RPCs
+Range = 0x 0000 0001 - 0x 0000 7FFF
+-->
+<element name="SendHapticDataID" value="49" hexvalue="31" />
+<element name="SetMediaPlayModeID" value="50" hexvalue="32" />  //add
+
+<!--
+ Base Notifications
+ Range = 0x 0000 8000 - 0x 0000 FFFF
+ -->
+<element name="OnWayPointChangeID" value="32784" hexvalue="8010" />
+<element name="OnMediaPlayModeChangeID" value="32785" hexvalue="8011" />  //add
+
+        
 <function name="SetMediaPlayMode" functionID="SetMediaPlayModeID" messagetype="request">
   <param name=“cycleMode” type="Common.CycleMode" mandatory="false">
     <description>Sets the cycle mode of the Media app connected via SDL. The available cycle mode is “SINGLE”, “LIST”, ALL” and “NOT_SUPPORT”.</description>
@@ -53,3 +68,12 @@ Mobile API
   </param>
 </function>
 
+<function name="OnMediaPlayModeChange” functionID="OnMediaPlayModeChangeID" messagetype="notification">
+  <description>Must be sent by HU system when the user clicks on buttons of play mode. One or both param below should be provided.</description>
+  <param name="cycleMode" type="Common.CycleMode" mandatory=“false”>
+    <description>The cycle mode which is supposed to be switched to.</description>
+  </param>
+  <param name="shuffleMode" type="Common.ShuffleMode" mandatory=“false”>
+    <description>The shuffle mode which is supposed to be switched to.</description>
+  </param>
+</function>
