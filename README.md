@@ -1,11 +1,15 @@
 # SDL QT HMI
 
-This is the QT HMI project for the sdl core. 
+This is the QT HMI project for the sdl core. It is currently able to run under Linux, and support for other platforms is also planned.<br>
 This has been verified in the environment Ubuntu 16.04 LTS 64bit.
 
 # Getting Started
 
 ## Generate QT HMI
+
+Currently, we have two ways to generate QT HMI:
+  * Use CMake
+  * Use Qt Creator
 
 ### USE CMake
 #### Linux
@@ -30,18 +34,17 @@ $apt install qtbase5-dev
 ##### Environment
 * Qt Creator >= VERSION 5.3.2
 ##### BUILD
-Install and open your Qt Creator, make sure you can run the sample qt project, 
-then open SDL_Qt_HMI.pro, and build your project.<\br>
-Then you can get the executable `SDL_Qt_HMI` in your build directory.
+Install and open your Qt Creator, make sure you can run the sample qt project, then open `SDL_Qt_HMI.pro`, and build your project.<br>
+After this, you can get the executable `SDL_Qt_HMI` in your build directory.
 
 
 ## Start QT HMI
 Create a folder for your executable as <excute_dir> and do:
   1. Build [sdl_core](https://github.com/smartdevicelink/sdl_core), after `make install`, copy all the files in the bin folder to <excute_dir>
-  2. Build [HMI_SDK_LIB], which is just in the upper directory, after `make`, copy `libhmi_sdk.so` in app folder to <excute_dir>
+  2. Build HMI_SDK_LIB, which is just in the upper directory, after `make`, copy `libhmi_sdk.so` in app folder to <excute_dir>
   3. copy the generated `SDL_Qt_HMI` to <excute_dir>
-  3. Create a folder named Config in your <excute_dir>, and copy all the files in <current_path>/res/hmi to <excute_dir>/Config
-  4. copy opening movie Main_build_3.mov in <current_path>/res to <excute_dir>
+  3. Create a folder named Config in your <excute_dir>, and copy all the files in `<current_path>/res/hmi` to `<excute_dir>/Config`
+  4. copy opening movie `Main_build_3.mov` in `<current_path>/res` to <excute_dir>
   5. start sdl core
 ```shell
 $./start.sh
