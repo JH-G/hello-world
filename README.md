@@ -1,7 +1,7 @@
 # SDL QT HMI
 
 This is the QT HMI project for the sdl core. It is currently able to run under Linux, and support for other platforms is also planned.<br>
-This has been verified in the environment Ubuntu 16.04 LTS 64bit.
+This project has been verified in the environment Ubuntu 16.04 LTS 64bit.
 
 # Getting Started
 
@@ -42,19 +42,19 @@ After this, you can get the executable `SDL_Qt_HMI` in your build directory.
 Create a folder for your executable as <excute_dir> and do:
   1. Build [sdl_core](https://github.com/smartdevicelink/sdl_core), after `make install`, copy all the files in the bin folder to <excute_dir>
   2. Build HMI_SDK_LIB, which is just in the upper directory, after `make`, copy `libhmi_sdk.so` in app folder to <excute_dir>
-  3. copy the generated `SDL_Qt_HMI` to <excute_dir>
-  3. Create a folder named Config in your <excute_dir>, and copy all the files in `<current_path>/res/hmi` to `<excute_dir>/Config`
-  4. copy opening movie `Main_build_3.mov` in `<current_path>/res` to <excute_dir>
-  5. start sdl core
+  3. copy the generated `SDL_Qt_HMI` to <excute_dir>, see chapter `Generate QT HMI`
+  4. Create a folder named Config in your <excute_dir>, and copy all the files in `<current_path>/res/hmi` to `<excute_dir>/Config`
+  5. copy opening movie `Main_build_3.mov` in `<current_path>/res` to <excute_dir>
+  6. start sdl core
 ```shell
 $./start.sh
 ```
-  6. start QT HMI
+  7. start QT HMI
 ```shell
 $./SDL_Qt_HMI 
 ```
 
-Notice: If you want to use USB connect with sdl, you should run step5/6 in root authority.
+Notice: If you want to use USB connect with sdl, you should run step6/7 in root authority.
 
 
 # Known issues
