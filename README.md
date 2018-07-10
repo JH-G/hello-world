@@ -4,8 +4,8 @@
 HMI_SDK_LIB is a sample Qt HMI sdk to use with sdl_core, which encapsulated json parser.<br>
 At the same time, we also provide a reference design for QT HMI using HMI_SDK_LIB.<br>
 This repository consists of two parts: 
-  1. HMI_SDK_LIB: Qt HMI sdk to use with sdl_core
-  2. ReferenceDesign: QT HMI project using HMI_SDK_LIB to interact with sdl_core
+  * HMI_SDK_LIB: Qt HMI sdk to use with sdl_core
+  * ReferenceDesign: QT HMI project using HMI_SDK_LIB to interact with sdl_core
 
 ## Subdirectory
 
